@@ -588,12 +588,12 @@ header .navigation .mainnav .show-nav {
 }
 @media (min-width: 540px) {
   .banner .banner-item {
-    padding: 10rem 2rem 0;
+    padding: 15rem 2rem 0;
   }
 }
 @media (min-width: 700px) {
   .banner .banner-item {
-    padding: 15rem 2rem 0;
+    padding: 16rem 2rem 0;
   }
 }
 @media (min-width: 960px) {

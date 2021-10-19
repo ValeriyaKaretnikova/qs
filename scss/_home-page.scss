@@ -15,13 +15,13 @@
     background-attachment: fixed;
   }
   .banner-item {
-    padding: 8rem 1rem 0;
+    padding: 10rem 1rem 0;
     text-align: center;
     @include break(small) {
-      padding: 10rem 2rem 0;
+      padding: 15rem 2rem 0;
     }
     @include break(med) {
-      padding: 15rem 2rem 0;
+      padding: 16rem 2rem 0;
     }
     @include break(wide) {
       padding: 17rem 2rem 0;
