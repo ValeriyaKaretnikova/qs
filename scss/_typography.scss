@@ -1,0 +1,38 @@
+@use 'colors' as *;
+
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color:inherit;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 3rem;
+
+}
+h3{
+    font-size: 1.8rem;
+
+}
+h4{
+    font-size: 1.5rem;
+
+}
+h5{
+    font-size: 1.2rem;
+}
+p{
+    margin: 1rem auto;
+    color: $font-grey;
+}
