@@ -541,7 +541,7 @@ header .navigation .mainnav .show-nav {
   text-transform: uppercase;
   font-weight: bold;
   animation: animateHeading 3s cubic-bezier(0.075, 0.82, 0.165, 1);
-  font-size: 2rem;
+  font-size: 1.8rem;
   letter-spacing: 2px;
 }
 @media (min-width: 540px) {
@@ -748,6 +748,7 @@ header .navigation .mainnav .show-nav {
 .services .service-list .installation,
 .services .service-list .rennovation {
   background-color: #2f2f2f;
+  position: relative;
 }
 .services .service-list .installation img,
 .services .service-list .rennovation img {
@@ -775,16 +776,29 @@ header .navigation .mainnav .show-nav {
 .services .service-list .installation .text h4,
 .services .service-list .rennovation .text h4 {
   text-transform: capitalize;
-  position: relative;
 }
-.services .service-list .installation .text span,
-.services .service-list .rennovation .text span {
-  font-size: 67px;
-  left: -95px;
+.services .service-list .installation span,
+.services .service-list .rennovation span {
+  font-size: 70px;
   line-height: 1;
   position: absolute;
-  top: 78px;
   color: #fe5420;
+  left: 0px;
+  top: 0px;
+}
+@media (min-width: 700px) {
+  .services .service-list .installation .first,
+.services .service-list .rennovation .first {
+    left: 40%;
+    font-size: 100px;
+  }
+}
+@media (min-width: 700px) {
+  .services .service-list .installation .second,
+.services .service-list .rennovation .second {
+    left: 53%;
+    font-size: 100px;
+  }
 }
 @media (min-width: 700px) {
   .services .service-list .rennovation {
@@ -1221,6 +1235,7 @@ header .navigation .mainnav .show-nav {
 }
 .join-team .message p span {
   color: #fe5420;
+  font-weight: bold;
 }
 @media (min-width: 700px) {
   .join-team .message {
@@ -1269,62 +1284,105 @@ header .navigation .mainnav .show-nav {
   }
 }
 
-/*--------------------License-----------------------------------*/
-.license {
-  background-color: #f0f0f0;
+/*--------------------Area-----------------------------------*/
+.area {
+  background-color: white;
+  margin: 0 auto;
+  padding: 4rem 0;
 }
-.license .wrapper {
+.area .wrapper {
   text-align: center;
   padding: 0 1rem;
 }
 @media (min-width: 700px) {
-  .license .wrapper {
+  .area .wrapper {
     transform: none;
-    background-color: #f0f0f0;
     padding: 0;
     height: 180px;
     margin-left: 1rem;
   }
 }
-.license p {
+.area .wrapper .area-heading:before {
+  content: "";
+  width: 70px;
+  height: 96px;
+  border: 2px solid #fe5420;
+  position: absolute;
+  left: 23%;
+  margin-left: -35px;
+  display: block;
+  z-index: 0;
+}
+.area .wrapper .area-heading {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.area .wrapper .area-heading p {
+  margin: 0;
+  font-size: 14px;
+  padding: 0.8rem 0 0.2rem;
+  position: relative;
+  z-index: 2;
+  letter-spacing: -0.08em;
+  color: #9e9e9e;
+}
+.area .wrapper .area-heading h3 {
+  margin: 0;
   color: #2f2f2f;
   text-transform: uppercase;
-  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+.area .wrapper .area-heading h3:after {
+  content: ".";
+  color: #fe5420;
+  font-size: 45px;
+  line-height: 1;
+  display: inline-block;
+}
+.area p {
+  color: #2f2f2f;
   padding-top: 3rem;
   margin: 0;
   position: relative;
 }
-.license p:before {
+.area p:before {
   content: url(../img/icons/quality.svg);
   position: absolute;
   top: -2rem;
   left: -0.5rem;
 }
 @media (min-width: 700px) {
-  .license p:before {
-    top: -3rem;
+  .area p:before {
+    top: -6rem;
     left: 1rem;
   }
 }
 @media (min-width: 700px) {
-  .license p {
+  .area p {
     margin-top: 0;
     padding-top: 1.5rem;
   }
 }
-.license img {
+.area img {
   margin: 0 auto;
-  padding-bottom: 3rem;
+  padding-bottom: 0rem;
+  max-width: 300px;
 }
 @media (min-width: 700px) {
-  .license img {
-    padding-bottom: 0.3rem;
+  .area img {
+    max-width: 180px;
+  }
+}
+@media (min-width: 960px) {
+  .area img {
+    max-width: 200px;
   }
 }
 @media (min-width: 700px) {
-  .license {
+  .area {
     transform: none;
-    margin: 0;
+    margin-bottom: 2rem;
     flex-grow: 1;
     background-color: white;
   }
@@ -1335,86 +1393,6 @@ header .navigation .mainnav .show-nav {
     display: flex;
     align-items: center;
   }
-}
-
-.insta {
-  background-color: #2f2f2f;
-  margin: 0 0 3rem;
-  padding: 4rem 0;
-}
-.insta .insta-heading:before {
-  content: "";
-  width: 70px;
-  height: 96px;
-  border: 2px solid #fe5420;
-  position: absolute;
-  left: 50%;
-  margin-left: -35px;
-  display: block;
-  z-index: 0;
-}
-.insta .insta-heading {
-  padding-bottom: 2rem;
-  text-align: center;
-}
-.insta .insta-heading p {
-  margin: 0;
-  font-size: 14px;
-  padding: 0.8rem 0 0.2rem;
-  position: relative;
-  z-index: 2;
-  letter-spacing: -0.08em;
-  color: #9e9e9e;
-}
-.insta .insta-heading h3 {
-  margin: 0;
-  color: #f0f0f0;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 1;
-}
-.insta .insta-heading h3:after {
-  content: ".";
-  color: #fe5420;
-  font-size: 45px;
-  line-height: 1;
-  display: inline-block;
-}
-.insta #instafeed-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.insta #instafeed-container .instaItem {
-  position: relative;
-  flex: 0 0 320px;
-  height: 320px;
-  margin: 0.5rem;
-  cursor: pointer;
-}
-.insta #instafeed-container .instaItem:hover p {
-  opacity: 1;
-  top: 0;
-}
-.insta #instafeed-container .instaItem p {
-  font-size: 0.9rem;
-  color: #e5e5e5;
-  padding: 1.5rem;
-  margin: 0;
-  height: 100%;
-  overflow-y: auto;
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  top: -3rem;
-  background-color: rgba(47, 47, 47, 0.9);
-  transition: all 0.4s ease-in-out;
-}
-.insta #instafeed-container .instaItem img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /*-------------------------------Footer--------------------------*/
@@ -1435,42 +1413,44 @@ footer .contacts {
     justify-content: space-evenly;
   }
 }
-footer .contact-item {
+footer .contacts .contact-item {
   display: flex;
   align-items: center;
 }
-footer .contact-item img {
-  margin-right: 2rem;
+footer .contacts .contact-item img {
+  margin-right: 1rem;
+  width: 20px;
+  height: 20px;
 }
 @media (min-width: 960px) {
-  footer .contact-item img {
+  footer .contacts .contact-item img {
     margin: 0;
   }
 }
-footer .contact-item .separator {
+footer .contacts .contact-item .separator {
   width: 0.3rem;
   height: 1.7rem;
   background-color: #fe5420;
   margin-right: 2rem;
 }
 @media (min-width: 960px) {
-  footer .contact-item .separator {
+  footer .contacts .contact-item .separator {
     margin: 0 1rem;
   }
 }
-footer .contact-item .info-text p {
+footer .contacts .contact-item .info-text p {
   color: #9e9e9e;
 }
-footer .contact-item .info-text p:first-child {
+footer .contacts .contact-item .info-text p:first-child {
   color: white;
   margin-bottom: 0.3rem;
 }
-footer .contact-item .info-text p:last-child {
+footer .contacts .contact-item .info-text p:last-child {
   margin-top: 0;
   font-size: 0.8rem;
 }
 @media (min-width: 960px) {
-  footer .contact-item {
+  footer .contacts .contact-item {
     justify-content: center;
   }
 }
@@ -1492,7 +1472,7 @@ footer .summary p {
   color: #9e9e9e;
 }
 footer .summary img {
-  max-width: 300px;
+  max-width: 200px;
   margin: 0 auto;
 }
 @media (min-width: 700px) {
@@ -1549,10 +1529,11 @@ footer .dark-background .icons a {
   border-radius: 3px;
   background-color: #2f2f2f;
   transition: all 0.3s ease-in-out;
+  margin-right: 1rem;
 }
 @media (min-width: 540px) {
   footer .dark-background .icons a {
-    margin-right: 1.5rem;
+    margin-right: 1rem;
   }
 }
 footer .dark-background .icons a:hover {
@@ -1562,8 +1543,8 @@ footer .dark-background .icons a:hover svg {
   fill: #2f2f2f;
 }
 footer .dark-background .icons svg {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   fill: #f0f0f0;
 }
 @media (min-width: 540px) {

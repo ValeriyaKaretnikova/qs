@@ -623,7 +623,7 @@ header .navigation .mainnav .show-nav {
   font-weight: bold;
   -webkit-animation: animateHeading 3s cubic-bezier(0.075, 0.82, 0.165, 1);
           animation: animateHeading 3s cubic-bezier(0.075, 0.82, 0.165, 1);
-  font-size: 2rem;
+  font-size: 1.8rem;
   letter-spacing: 2px;
 }
 @media (min-width: 540px) {
@@ -639,6 +639,25 @@ header .navigation .mainnav .show-nav {
 @media (min-width: 960px) {
   .banner h2 {
     font-size: 4rem;
+  }
+}
+.banner span.name {
+  font-size: 3rem;
+  display: block;
+}
+@media (min-width: 540px) {
+  .banner span.name {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 700px) {
+  .banner span.name {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 960px) {
+  .banner span.name {
+    font-size: 6rem;
   }
 }
 @-webkit-keyframes animateHeading {
@@ -865,7 +884,13 @@ header .navigation .mainnav .show-nav {
 @media (min-width: 700px) {
   .services .service-list .installation .text,
 .services .service-list .rennovation .text {
-    padding: 0rem 1rem;
+    padding: 0rem 2rem;
+  }
+}
+@media (min-width: 960px) {
+  .services .service-list .installation .text,
+.services .service-list .rennovation .text {
+    padding: 0rem 8rem;
   }
 }
 .services .service-list .installation .text h4,
@@ -884,8 +909,14 @@ header .navigation .mainnav .show-nav {
 @media (min-width: 700px) {
   .services .service-list .installation .first,
 .services .service-list .rennovation .first {
-    left: 40%;
+    left: 35%;
     font-size: 100px;
+  }
+}
+@media (min-width: 960px) {
+  .services .service-list .installation .first,
+.services .service-list .rennovation .first {
+    left: 40%;
   }
 }
 @media (min-width: 700px) {
@@ -1441,12 +1472,7 @@ header .navigation .mainnav .show-nav {
 .area {
   background-color: white;
   margin: 0 auto;
-  padding: 4rem 0;
-}
-@media (min-width: 700px) {
-  .area {
-    margin-bottom: 2rem;
-  }
+  padding: 2rem 0 4rem;
 }
 .area .wrapper {
   text-align: center;
@@ -1467,10 +1493,20 @@ header .navigation .mainnav .show-nav {
   height: 96px;
   border: 2px solid #fe5420;
   position: absolute;
-  left: 23%;
+  left: 50%;
   margin-left: -35px;
   display: block;
   z-index: 0;
+}
+@media (min-width: 700px) {
+  .area .wrapper .area-heading:before {
+    left: 23%;
+  }
+}
+@media (min-width: 1140px) {
+  .area .wrapper .area-heading:before {
+    left: 30%;
+  }
 }
 .area .wrapper .area-heading {
   padding-bottom: 2rem;
@@ -1512,12 +1548,6 @@ header .navigation .mainnav .show-nav {
   left: -0.5rem;
 }
 @media (min-width: 700px) {
-  .area p:before {
-    top: -6rem;
-    left: 1rem;
-  }
-}
-@media (min-width: 700px) {
   .area p {
     margin-top: 0;
     padding-top: 1.5rem;
@@ -1533,14 +1563,19 @@ header .navigation .mainnav .show-nav {
     max-width: 180px;
   }
 }
+@media (min-width: 960px) {
+  .area img {
+    max-width: 200px;
+  }
+}
 @media (min-width: 700px) {
   .area {
     -webkit-transform: none;
             transform: none;
-    margin: 0;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    margin-bottom: 2rem;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
     background-color: white;
   }
 }
@@ -1580,7 +1615,7 @@ footer .contacts {
             justify-content: space-evenly;
   }
 }
-footer .contact-item {
+footer .contacts .contact-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1588,38 +1623,52 @@ footer .contact-item {
       -ms-flex-align: center;
           align-items: center;
 }
-footer .contact-item img {
-  margin-right: 2rem;
+footer .contacts .contact-item img {
+  margin-right: 1rem;
+  width: 30px;
+  height: 30px;
+}
+@media (min-width: 700px) {
+  footer .contacts .contact-item img {
+    margin-right: 2rem;
+    width: 40px;
+    height: 40px;
+  }
 }
 @media (min-width: 960px) {
-  footer .contact-item img {
+  footer .contacts .contact-item img {
     margin: 0;
   }
 }
-footer .contact-item .separator {
+footer .contacts .contact-item .separator {
   width: 0.3rem;
   height: 1.7rem;
   background-color: #fe5420;
-  margin-right: 2rem;
+  margin-right: 0.5rem;
+}
+@media (min-width: 700px) {
+  footer .contacts .contact-item .separator {
+    margin-right: 1rem;
+  }
 }
 @media (min-width: 960px) {
-  footer .contact-item .separator {
+  footer .contacts .contact-item .separator {
     margin: 0 1rem;
   }
 }
-footer .contact-item .info-text p {
+footer .contacts .contact-item .info-text p {
   color: #9e9e9e;
 }
-footer .contact-item .info-text p:first-child {
+footer .contacts .contact-item .info-text p:first-child {
   color: white;
   margin-bottom: 0.3rem;
 }
-footer .contact-item .info-text p:last-child {
+footer .contacts .contact-item .info-text p:last-child {
   margin-top: 0;
   font-size: 0.8rem;
 }
 @media (min-width: 960px) {
-  footer .contact-item {
+  footer .contacts .contact-item {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1719,10 +1768,11 @@ footer .dark-background .icons a {
   background-color: #2f2f2f;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  margin-right: 1rem;
 }
 @media (min-width: 540px) {
   footer .dark-background .icons a {
-    margin-right: 1.5rem;
+    margin-right: 1rem;
   }
 }
 footer .dark-background .icons a:hover {
@@ -1732,8 +1782,8 @@ footer .dark-background .icons a:hover svg {
   fill: #2f2f2f;
 }
 footer .dark-background .icons svg {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   fill: #f0f0f0;
 }
 @media (min-width: 540px) {
