@@ -502,6 +502,14 @@ header .navigation .mainnav .show-nav {
   background-repeat: no-repeat;
   width: 100%;
   height: 95vh;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+.banner .wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 @media (min-width: 960px) {
   .banner {
@@ -509,24 +517,13 @@ header .navigation .mainnav .show-nav {
   }
 }
 .banner .banner-item {
-  padding: 10rem 1rem 0;
+  width: 100%;
   text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   animation: animate 3s ease-in-out forwards;
-}
-@media (min-width: 540px) {
-  .banner .banner-item {
-    padding: 15rem 2rem 0;
-  }
-}
-@media (min-width: 700px) {
-  .banner .banner-item {
-    padding: 16rem 2rem 0;
-  }
-}
-@media (min-width: 960px) {
-  .banner .banner-item {
-    padding: 17rem 2rem 0;
-  }
 }
 @keyframes animate {
   0% {
@@ -546,17 +543,12 @@ header .navigation .mainnav .show-nav {
 }
 @media (min-width: 540px) {
   .banner h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 700px) {
   .banner h2 {
-    font-size: 4rem;
-  }
-}
-@media (min-width: 960px) {
-  .banner h2 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 .banner span.name {
