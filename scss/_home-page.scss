@@ -52,7 +52,6 @@
     @include break(med) {
       font-size: 3rem;
     }
-   
   }
   span.name {
     font-size: 3rem;
@@ -277,6 +276,9 @@
         }
         h4 {
           text-transform: capitalize;
+        }
+        p {
+          color: $lightgrey;
         }
       }
       span {
@@ -534,6 +536,87 @@
   }
 }
 
+/*------------------------Our Story---------------------------------*/
+.story {
+  background-color: $graphit;
+
+  margin: 0 auto;
+  text-align: center;
+  .wrapper {
+    margin: 0 auto;
+    padding-bottom: 3rem;
+  }
+  .flex-med {
+    @include break(med) {
+      align-items: flex-start;
+    }
+  }
+
+  .story-heading:before {
+    content: "";
+    width: 70px;
+    height: 96px;
+    border: 2px solid $orange;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    display: block;
+    z-index: 0;
+  }
+  .story-heading {
+    padding: 4rem 0;
+    p {
+      margin: 0;
+      font-size: 14px;
+      padding: 0.8rem 0 0.2rem;
+      position: relative;
+      z-index: 2;
+      letter-spacing: -0.08em;
+      color: $lightgrey;
+    }
+    h3 {
+      margin: 0;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+      color: $offwhite;
+    }
+    h3:after {
+      content: ".";
+      color: $orange;
+      font-size: 45px;
+      line-height: 1;
+      display: inline-block;
+    }
+  }
+  img {
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+    @include break(med) {
+      width: 40%;
+      height: auto;
+    }
+  }
+
+  .text {
+    text-align: left;
+    margin: 0 1rem;
+    padding: 1rem;
+    h5 {
+      margin: 0.8rem 0;
+    }
+
+    p {
+      color: $lightgrey;
+      font-size: 0.8rem;
+    }
+
+    @include break(med) {
+      width: 30%;
+    }
+  }
+}
 /*------------------------Testimonials------------------------------*/
 
 .testimonials {
@@ -750,7 +833,9 @@
 
 /*------------------------------Contact-------------------------------*/
 .contact-form {
-  margin: 1rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  width: 90%;
   .contact-text,
   .contact-button {
     background-color: $orange;
@@ -782,26 +867,27 @@
       background-color: $offwhite;
     }
   }
-  @include break(med) {
-    flex-grow: 2;
+  @include break(wide){
+    width: 380px;
+    position: absolute;
+    left: 62%;
+    top: -5rem;
   }
+}
+.wrapper{
+  position: relative;
 }
 
 /*--------------------Area-----------------------------------*/
 .area {
   background-color: white;
   margin: 0 auto;
-  padding: 2rem 0 4rem;
-
+  padding: 2rem 0;
+ 
   .wrapper {
+    margin: 0 auto;
     text-align: center;
-    padding: 0 1rem;
-    @include break(med) {
-      transform: none;
-      padding: 0;
-      height: 180px;
-      margin-left: 1rem;
-    }
+
     .area-heading:before {
       content: "";
       width: 70px;
@@ -812,16 +898,11 @@
       margin-left: -35px;
       display: block;
       z-index: 0;
-      @include break(med) {
-        left: 23%;
-      }
-      @include break(exwide) {
-        left: 30%;
-      }
     }
     .area-heading {
       padding-bottom: 2rem;
       text-align: center;
+      position: relative;
       p {
         margin: 0;
         font-size: 14px;
@@ -846,43 +927,11 @@
         display: inline-block;
       }
     }
-  }
-  p {
-    color: $graphit;
-    padding-top: 3rem;
-    margin: 0;
-    position: relative;
-    &:before {
-      content: url(../img/icons/quality.svg);
-      position: absolute;
-      top: -2rem;
-      left: -0.5rem;
-      // @include break(med) {
-      //   top: -6rem;
-      //   left: 1rem;
-      // }
+    img {
+      margin: 0 auto;
+      max-width: 500px;
+      width: 100%;
     }
-    @include break(med) {
-      margin-top: 0;
-      padding-top: 1.5rem;
-    }
-  }
-  img {
-    margin: 0 auto;
-    padding-bottom: 0rem;
-    max-width: 300px;
-    @include break(med) {
-      max-width: 180px;
-    }
-    @include break(wide) {
-      max-width: 200px;
-    }
-  }
-  @include break(med) {
-    transform: none;
-    margin-bottom: 2rem;
-    flex-grow: 2;
-    background-color: white;
   }
 }
 
@@ -892,3 +941,4 @@
     align-items: center;
   }
 }
+
