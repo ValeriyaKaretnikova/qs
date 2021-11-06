@@ -502,6 +502,14 @@ header .navigation .mainnav .show-nav {
   background-repeat: no-repeat;
   width: 100%;
   height: 95vh;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+.banner .wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 @media (min-width: 960px) {
   .banner {
@@ -509,24 +517,13 @@ header .navigation .mainnav .show-nav {
   }
 }
 .banner .banner-item {
-  padding: 8rem 1rem 0;
+  width: 100%;
   text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   animation: animate 3s ease-in-out forwards;
-}
-@media (min-width: 540px) {
-  .banner .banner-item {
-    padding: 10rem 2rem 0;
-  }
-}
-@media (min-width: 700px) {
-  .banner .banner-item {
-    padding: 15rem 2rem 0;
-  }
-}
-@media (min-width: 960px) {
-  .banner .banner-item {
-    padding: 17rem 2rem 0;
-  }
 }
 @keyframes animate {
   0% {
@@ -546,17 +543,31 @@ header .navigation .mainnav .show-nav {
 }
 @media (min-width: 540px) {
   .banner h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 700px) {
   .banner h2 {
+    font-size: 3rem;
+  }
+}
+.banner span.name {
+  font-size: 3rem;
+  display: block;
+}
+@media (min-width: 540px) {
+  .banner span.name {
     font-size: 4rem;
   }
 }
+@media (min-width: 700px) {
+  .banner span.name {
+    font-size: 5rem;
+  }
+}
 @media (min-width: 960px) {
-  .banner h2 {
-    font-size: 4rem;
+  .banner span.name {
+    font-size: 6rem;
   }
 }
 @keyframes animateHeading {
@@ -770,12 +781,22 @@ header .navigation .mainnav .show-nav {
 @media (min-width: 700px) {
   .services .service-list .installation .text,
 .services .service-list .rennovation .text {
-    padding: 0rem 1rem;
+    padding: 0rem 2rem;
+  }
+}
+@media (min-width: 960px) {
+  .services .service-list .installation .text,
+.services .service-list .rennovation .text {
+    padding: 0rem 8rem;
   }
 }
 .services .service-list .installation .text h4,
 .services .service-list .rennovation .text h4 {
   text-transform: capitalize;
+}
+.services .service-list .installation .text p,
+.services .service-list .rennovation .text p {
+  color: #9e9e9e;
 }
 .services .service-list .installation span,
 .services .service-list .rennovation span {
@@ -789,8 +810,14 @@ header .navigation .mainnav .show-nav {
 @media (min-width: 700px) {
   .services .service-list .installation .first,
 .services .service-list .rennovation .first {
-    left: 40%;
+    left: 35%;
     font-size: 100px;
+  }
+}
+@media (min-width: 960px) {
+  .services .service-list .installation .first,
+.services .service-list .rennovation .first {
+    left: 40%;
   }
 }
 @media (min-width: 700px) {
@@ -1026,6 +1053,87 @@ header .navigation .mainnav .show-nav {
   color: white;
 }
 
+/*------------------------Our Story---------------------------------*/
+.story {
+  background-color: #2f2f2f;
+  margin: 0 auto;
+  text-align: center;
+}
+.story .wrapper {
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+@media (min-width: 700px) {
+  .story .flex-med {
+    align-items: flex-start;
+  }
+}
+.story .story-heading:before {
+  content: "";
+  width: 70px;
+  height: 96px;
+  border: 2px solid #fe5420;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  display: block;
+  z-index: 0;
+}
+.story .story-heading {
+  padding: 4rem 0;
+}
+.story .story-heading p {
+  margin: 0;
+  font-size: 14px;
+  padding: 0.8rem 0 0.2rem;
+  position: relative;
+  z-index: 2;
+  letter-spacing: -0.08em;
+  color: #9e9e9e;
+}
+.story .story-heading h3 {
+  margin: 0;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  color: #f0f0f0;
+}
+.story .story-heading h3:after {
+  content: ".";
+  color: #fe5420;
+  font-size: 45px;
+  line-height: 1;
+  display: inline-block;
+}
+.story img {
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+@media (min-width: 700px) {
+  .story img {
+    width: 40%;
+    height: auto;
+  }
+}
+.story .text {
+  text-align: left;
+  margin: 0 1rem;
+  padding: 1rem;
+}
+.story .text h5 {
+  margin: 0.8rem 0;
+}
+.story .text p {
+  color: #9e9e9e;
+  font-size: 0.8rem;
+}
+@media (min-width: 700px) {
+  .story .text {
+    width: 30%;
+  }
+}
+
 /*------------------------Testimonials------------------------------*/
 .testimonials {
   background-color: #f0f0f0;
@@ -1247,7 +1355,9 @@ header .navigation .mainnav .show-nav {
 
 /*------------------------------Contact-------------------------------*/
 .contact-form {
-  margin: 1rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  width: 90%;
 }
 .contact-form .contact-text,
 .contact-form .contact-button {
@@ -1278,29 +1388,28 @@ header .navigation .mainnav .show-nav {
   color: #242424;
   background-color: #f0f0f0;
 }
-@media (min-width: 700px) {
+@media (min-width: 960px) {
   .contact-form {
-    flex-grow: 2;
+    width: 380px;
+    position: absolute;
+    left: 62%;
+    top: -5rem;
   }
+}
+
+.wrapper {
+  position: relative;
 }
 
 /*--------------------Area-----------------------------------*/
 .area {
   background-color: white;
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 .area .wrapper {
+  margin: 0 auto;
   text-align: center;
-  padding: 0 1rem;
-}
-@media (min-width: 700px) {
-  .area .wrapper {
-    transform: none;
-    padding: 0;
-    height: 180px;
-    margin-left: 1rem;
-  }
 }
 .area .wrapper .area-heading:before {
   content: "";
@@ -1308,7 +1417,7 @@ header .navigation .mainnav .show-nav {
   height: 96px;
   border: 2px solid #fe5420;
   position: absolute;
-  left: 23%;
+  left: 50%;
   margin-left: -35px;
   display: block;
   z-index: 0;
@@ -1316,6 +1425,7 @@ header .navigation .mainnav .show-nav {
 .area .wrapper .area-heading {
   padding-bottom: 2rem;
   text-align: center;
+  position: relative;
 }
 .area .wrapper .area-heading p {
   margin: 0;
@@ -1340,52 +1450,10 @@ header .navigation .mainnav .show-nav {
   line-height: 1;
   display: inline-block;
 }
-.area p {
-  color: #2f2f2f;
-  padding-top: 3rem;
-  margin: 0;
-  position: relative;
-}
-.area p:before {
-  content: url(../img/icons/quality.svg);
-  position: absolute;
-  top: -2rem;
-  left: -0.5rem;
-}
-@media (min-width: 700px) {
-  .area p:before {
-    top: -6rem;
-    left: 1rem;
-  }
-}
-@media (min-width: 700px) {
-  .area p {
-    margin-top: 0;
-    padding-top: 1.5rem;
-  }
-}
-.area img {
+.area .wrapper img {
   margin: 0 auto;
-  padding-bottom: 0rem;
-  max-width: 300px;
-}
-@media (min-width: 700px) {
-  .area img {
-    max-width: 180px;
-  }
-}
-@media (min-width: 960px) {
-  .area img {
-    max-width: 200px;
-  }
-}
-@media (min-width: 700px) {
-  .area {
-    transform: none;
-    margin-bottom: 2rem;
-    flex-grow: 1;
-    background-color: white;
-  }
+  max-width: 500px;
+  width: 100%;
 }
 
 @media (min-width: 700px) {
@@ -1419,8 +1487,15 @@ footer .contacts .contact-item {
 }
 footer .contacts .contact-item img {
   margin-right: 1rem;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+}
+@media (min-width: 700px) {
+  footer .contacts .contact-item img {
+    margin-right: 2rem;
+    width: 40px;
+    height: 40px;
+  }
 }
 @media (min-width: 960px) {
   footer .contacts .contact-item img {
@@ -1431,7 +1506,12 @@ footer .contacts .contact-item .separator {
   width: 0.3rem;
   height: 1.7rem;
   background-color: #fe5420;
-  margin-right: 2rem;
+  margin-right: 0.5rem;
+}
+@media (min-width: 700px) {
+  footer .contacts .contact-item .separator {
+    margin-right: 1rem;
+  }
 }
 @media (min-width: 960px) {
   footer .contacts .contact-item .separator {
