@@ -867,12 +867,6 @@
       background-color: $offwhite;
     }
   }
-  @include break(wide){
-    width: 380px;
-    position: absolute;
-    left: 62%;
-    top: -5rem;
-  }
 }
 .wrapper{
   position: relative;

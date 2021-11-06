@@ -1388,14 +1388,6 @@ header .navigation .mainnav .show-nav {
   color: #242424;
   background-color: #f0f0f0;
 }
-@media (min-width: 960px) {
-  .contact-form {
-    width: 380px;
-    position: absolute;
-    left: 62%;
-    top: -5rem;
-  }
-}
 
 .wrapper {
   position: relative;
