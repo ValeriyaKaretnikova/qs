@@ -1347,10 +1347,53 @@ header .navigation .mainnav .show-nav {
 }
 @media (min-width: 700px) {
   .join-team .message {
-    width: 30rem;
+    width: 34rem;
     text-align: center;
     margin: 0 auto;
   }
+}
+.join-team .materials a::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fe5420;
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: all 0.3s;
+}
+@media (min-width: 700px) {
+  .join-team .materials {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .join-team .materials li {
+    flex-basis: 47%;
+    margin: 0 0.5rem;
+  }
+}
+@media (min-width: 960px) {
+  .join-team .materials li {
+    flex-basis: 20%;
+  }
+}
+.join-team .materials a {
+  font-size: 1rem;
+  color: #f0f0f0;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.join-team .materials a:hover {
+  color: #fe5420;
+}
+.join-team .materials a:hover::before {
+  background-color: #f0f0f0;
+}
+.join-team .materials p {
+  font-size: 0.8rem;
+  color: #9e9e9e;
 }
 
 /*------------------------------Contact-------------------------------*/

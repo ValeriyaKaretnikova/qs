@@ -824,9 +824,56 @@
       }
     }
     @include break(med) {
-      width: 30rem;
+      width: 34rem;
       text-align: center;
       margin: 0 auto;
+    }
+  }
+  .materials {
+    a::before {
+   
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $orange;
+        display: inline-block;
+        margin-right: 0.5rem;
+        transition: all 0.3s;    
+    }
+    @include break(med){
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      
+      li {
+        flex-basis: 47%;
+        margin: 0 0.5rem;
+        
+      }
+    }
+    @include break(wide){
+      li {
+        flex-basis: 20% ;
+      }
+    }
+    a {
+     
+      font-size: 1rem;
+      color: $offwhite;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: all 0.3s;
+      &:hover {
+        color: $orange;
+        &::before{
+          background-color: $offwhite;
+        }
+      }
+    }
+    p {
+      font-size: 0.8rem;
+      color: $lightgrey;
     }
   }
 }
